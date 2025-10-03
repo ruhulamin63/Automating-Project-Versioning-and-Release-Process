@@ -8,7 +8,9 @@ on:
 jobs:
   release:
     permissions:
-        contents: write
+        contents: write # Allows pushing commits and tags
+        issues: write # Allows creating issues (for semantic-release failure notifications)
+        pull-requests: write # Allows creating pull requests (for semantic-release failure notifications)
     runs-on: ubuntu-latest # Runs on an Ubuntu runner
 
     steps:
